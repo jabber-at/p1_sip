@@ -1,0 +1,20 @@
+Description: remove deps in rebar.config
+ Without this patch, rebar would download and compile the listed deps
+ at compile time.
+Author: Philipp Huebner <debalance@debian.org>
+
+Index: erlang-p1-sip/rebar.config
+===================================================================
+--- erlang-p1-sip.orig/rebar.config
++++ erlang-p1-sip/rebar.config
+@@ -1,10 +1,3 @@
+-{erl_opts, [{i, "include"},
+-	    {i, "deps/p1_stun/include"},
+-	    {i, "../p1_stun/include"}]}.
+-
+-{deps, [{p1_stun, ".*", {git, "git://github.com/processone/stun"}},
+-	{p1_tls, ".*", {git, "git://github.com/processone/tls"}},
+-	{p1_utils, ".*", {git, "git://github.com/processone/p1_utils"}}]}.
+ 
+ %% Local Variables:
+ %% mode: erlang

@@ -1,0 +1,17 @@
+Source: erlang-p1-sip
+Section: libs
+Priority: optional
+Maintainer: Philipp Huebner <debalance@debian.org>
+Build-Depends: debhelper (>= 9), dh-rebar, erlang-p1-stun, erlang-p1-tls, erlang-p1-utils
+Standards-Version: 3.9.5
+Homepage: https://github.com/processone/p1_sip
+
+
+Package: erlang-p1-sip
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, erlang-base | ${erlang-abi:Depends},
+         ${erlang:Depends}, erlang-p1-stun, erlang-p1-tls, erlang-p1-utils
+Description: SIP library for Erlang
+ This library was written for ejabberd which still uses it.
+ It was split off into it's own project to follow
+ Erlang/OTP guidelines.

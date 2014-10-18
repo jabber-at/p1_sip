@@ -1,0 +1,18 @@
+erlang-p1-sip (0.2014.07.17-2) unstable; urgency=high
+
+  * Fixed a FTBFS issue during dh_auto_install
+  * Made debian/copyright lintian-clean
+
+ -- Philipp Huebner <debalance@debian.org>  Tue, 09 Sep 2014 18:51:55 +0200
+
+erlang-p1-sip (0.2014.07.17-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.2014.07.17
+
+ -- Philipp Huebner <debalance@debian.org>  Thu, 28 Aug 2014 12:04:24 +0200
+
+erlang-p1-sip (0.2014.06.12-1) unstable; urgency=medium
+
+  * Initial release, see #744885 for background
+
+ -- Philipp Huebner <debalance@debian.org>  Mon, 07 Jul 2014 22:12:13 +0200
