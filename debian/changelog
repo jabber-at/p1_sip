@@ -1,3 +1,9 @@
+erlang-p1-sip (0.2014.10.10-1) unstable; urgency=high
+
+  * Imported Upstream version 0.2014.10.10
+
+ -- Mathias Ertl <mati@jabber.at>  Sat, 20 Dec 2014 18:03:11 +0100
+
 erlang-p1-sip (0.2014.07.17-2) unstable; urgency=high
 
   * Fixed a FTBFS issue during dh_auto_install
