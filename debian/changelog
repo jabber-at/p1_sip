@@ -1,6 +1,7 @@
 erlang-p1-sip (0.2015.04.17-1) unstable; urgency=high
 
   * Imported Upstream version 0.2015.04.17
+  * Add VCS-* fields
 
  -- Mathias Ertl <mati@jabber.at>  Fri, 24 Apr 2015 19:25:28 +0200
 
