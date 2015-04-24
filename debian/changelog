@@ -1,7 +1,8 @@
 erlang-p1-sip (0.2015.04.17-0.1) unstable; urgency=high
 
   * Imported Upstream version 0.2015.04.17
-  * Add VCS-* fields
+  * Add VCS-* fields.
+  * Add dpkg-dev (>= 1.16.1~) as build-dependency.
 
  -- Mathias Ertl <mati@jabber.at>  Fri, 24 Apr 2015 19:25:28 +0200
 

@@ -2,7 +2,8 @@ Source: erlang-p1-sip
 Section: libs
 Priority: optional
 Maintainer: Mathias Ertl <mati@jabber.at>
-Build-Depends: debhelper (>= 9), dh-rebar, erlang-p1-stun, erlang-p1-tls, erlang-p1-utils
+Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1~), dh-rebar,
+ erlang-p1-stun, erlang-p1-tls, erlang-p1-utils
 Standards-Version: 3.9.5
 Homepage: https://github.com/processone/p1_sip
 VCS-Browser: https://github.com/jabber-at/p1_sip
