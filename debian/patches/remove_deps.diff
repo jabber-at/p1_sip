@@ -3,18 +3,17 @@ Description: remove deps in rebar.config
  at compile time.
 Author: Philipp Huebner <debalance@debian.org>
 
-Index: erlang-p1-sip/rebar.config
-===================================================================
---- erlang-p1-sip.orig/rebar.config
-+++ erlang-p1-sip/rebar.config
-@@ -1,10 +1,3 @@
+--- a/rebar.config
++++ b/rebar.config
+@@ -1,11 +1,3 @@
 -{erl_opts, [{i, "include"},
 -	    {i, "deps/p1_stun/include"},
 -	    {i, "../p1_stun/include"}]}.
 -
--{deps, [{p1_stun, ".*", {git, "git://github.com/processone/stun"}},
--	{p1_tls, ".*", {git, "git://github.com/processone/tls"}},
--	{p1_utils, ".*", {git, "git://github.com/processone/p1_utils"}}]}.
- 
+-{deps, [{p1_stun, ".*", {git, "git://github.com/processone/stun.git"}},
+-	{p1_tls, ".*", {git, "git://github.com/processone/tls.git"}},
+-	{p1_utils, ".*", {git, "git://github.com/processone/p1_utils.git"}}]}.
+-
  %% Local Variables:
  %% mode: erlang
+ %% End:

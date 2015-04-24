@@ -4,11 +4,9 @@ Description: correct include
  necessary.
 Author: Philipp Huebner <debalance@debian.org>
 
-Index: erlang-p1-sip/src/esip_socket.erl
-===================================================================
---- erlang-p1-sip.orig/src/esip_socket.erl
-+++ erlang-p1-sip/src/esip_socket.erl
-@@ -22,7 +22,7 @@
+--- a/src/esip_socket.erl
++++ b/src/esip_socket.erl
+@@ -40,7 +40,7 @@
  
  -include("esip.hrl").
  -include("esip_lib.hrl").
