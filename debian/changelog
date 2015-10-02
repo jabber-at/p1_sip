@@ -1,3 +1,9 @@
+erlang-p1-sip (0.2015.07.22-0.1) unstable; urgency=high
+
+  * Imported Upstream version 0.2015.07.22
+
+ -- Mathias Ertl <mati@jabber.at>  Fri, 02 Oct 2015 18:26:20 +0200
+
 erlang-p1-sip (0.2015.04.17-0.1) unstable; urgency=high
 
   * Imported Upstream version 0.2015.04.17
