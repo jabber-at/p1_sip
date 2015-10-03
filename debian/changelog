@@ -1,6 +1,8 @@
 erlang-p1-sip (0.2015.07.22-0.1) unstable; urgency=high
 
-  * Imported Upstream version 0.2015.07.22
+  * Imported Upstream version 0.2015.07.22.
+  * Add erlang-syntax-tools as build dependency, so that the package also
+    builds in Ubuntu Wily.
 
  -- Mathias Ertl <mati@jabber.at>  Fri, 02 Oct 2015 18:26:20 +0200
 
