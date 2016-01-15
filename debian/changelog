@@ -3,6 +3,7 @@ erlang-p1-sip (1.0.0-0.1) unstable; urgency=high
   * New upstream release.
   * This package now uses upstream releases instead of a git snapshot,
     hence the versioning has changed.
+  * Use upstream tags for source packages.
 
  -- Mathias Ertl <mati@jabber.at>  Fri, 15 Jan 2016 23:03:17 +0100
 
