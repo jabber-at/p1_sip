@@ -5,22 +5,19 @@
 %%% Created : 6 Jan 2011 by Evgeniy Khramtsov <ekhramtsov@process-one.net>
 %%%
 %%%
-%%% p1_sip, Copyright (C) 2002-2015   ProcessOne
+%%% Copyright (C) 2002-2016 ProcessOne, SARL. All Rights Reserved.
 %%%
-%%% This program is free software; you can redistribute it and/or
-%%% modify it under the terms of the GNU General Public License as
-%%% published by the Free Software Foundation; either version 2 of the
-%%% License, or (at your option) any later version.
+%%% Licensed under the Apache License, Version 2.0 (the "License");
+%%% you may not use this file except in compliance with the License.
+%%% You may obtain a copy of the License at
 %%%
-%%% This program is distributed in the hope that it will be useful,
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-%%% General Public License for more details.
+%%%     http://www.apache.org/licenses/LICENSE-2.0
 %%%
-%%% You should have received a copy of the GNU General Public License
-%%% along with this program; if not, write to the Free Software
-%%% Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
-%%% 02111-1307 USA
+%%% Unless required by applicable law or agreed to in writing, software
+%%% distributed under the License is distributed on an "AS IS" BASIS,
+%%% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+%%% See the License for the specific language governing permissions and
+%%% limitations under the License.
 %%%
 %%%----------------------------------------------------------------------
 
@@ -109,7 +106,7 @@ send(#sip_socket{pid = Pid} = SIPSocket, Data) when node(Pid) /= node() ->
             ok
     end;
 send(#sip_socket{type = tls, sock = Sock}, Data) ->
-    p1_tls:send(Sock, Data);
+    fast_tls:send(Sock, Data);
 send(#sip_socket{type = tcp, sock = Sock}, Data) ->
     gen_tcp:send(Sock, Data);
 send(#sip_socket{type = udp, sock = Sock, peer = {Addr, Port}}, Data) ->
@@ -142,7 +139,7 @@ close(#sip_socket{pid = Pid} = SIPSocket) when node(Pid) /= node() ->
         _ -> ok
     end;
 close(#sip_socket{type = tls, sock = Sock}) ->
-    p1_tls:close(Sock);
+    fast_tls:close(Sock);
 close(#sip_socket{type = tcp, sock = Sock}) ->
     gen_tcp:close(Sock);
 close(#sip_socket{type = udp, sock = Sock}) ->
@@ -190,7 +187,7 @@ start_pool() ->
     end.
 
 sockname(#sip_socket{type = tls, sock = Sock}) ->
-    p1_tls:sockname(Sock);
+    fast_tls:sockname(Sock);
 sockname(#sip_socket{sock = Sock}) ->
     inet:sockname(Sock).
 
@@ -274,8 +271,8 @@ handle_info({tcp, Sock, Data}, #state{type = tcp} = State) ->
     esip:callback(data_in, [Data, make_sip_socket(State)]),
     process_data(State, Data);
 handle_info({tcp, _Sock, TLSData}, #state{type = tls} = State) ->
-    p1_tls:setopts(State#state.sock, [{active, once}]),
-    case p1_tls:recv_data(State#state.sock, TLSData) of
+    fast_tls:setopts(State#state.sock, [{active, once}]),
+    case fast_tls:recv_data(State#state.sock, TLSData) of
 	{ok, Data} ->
 	    esip:callback(data_in, [Data, make_sip_socket(State)]),
 	    process_data(State, Data);
@@ -501,9 +498,9 @@ maybe_starttls(Sock, tls, CertFile, _FromTo, Role) ->
 		undefined -> Opts1;
 		_ -> [{certfile, CertFile}|Opts1]
 	    end,
-    case p1_tls:tcp_to_tls(Sock, Opts2) of
+    case fast_tls:tcp_to_tls(Sock, Opts2) of
 	{ok, NewSock} when Role == client ->
-	    case p1_tls:recv_data(NewSock, <<"">>) of
+	    case fast_tls:recv_data(NewSock, <<"">>) of
 		{ok, <<"">>} ->
 		    {ok, NewSock};
 		{error, _} = Err ->
