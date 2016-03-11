@@ -1,6 +1,9 @@
 erlang-p1-sip (1.0.2-0.1) unstable; urgency=high
 
   * New upstream release.
+  * Merge changes in upstream package:
+    * Update watch, dh-rebar.conf, copyright and rules files.
+    * Merge changes in debian/control.
 
  -- Mathias Ertl <mati@jabber.at>  Fri, 11 Mar 2016 13:10:45 +0100
 
