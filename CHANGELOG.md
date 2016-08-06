@@ -1,3 +1,11 @@
+# Version 1.0.7
+
+* Update dependencies (Mickaël Rémond)
+
+# Version 1.0.6
+
+* Update dependencies (Mickaël Rémond)
+
 # Version 1.0.5
 
 * Fix message drops (Evgeny Khramtsov)
