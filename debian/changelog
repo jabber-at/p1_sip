@@ -1,6 +1,7 @@
 erlang-p1-sip (1.0.13-0.1) unstable; urgency=medium
 
   * New upstream release.
+  * Update Standards-Version to 4.0.0 (no changes needed).
 
  -- Mathias Ertl <mati@jabber.at>  Fri, 07 Jul 2017 12:48:20 +0200
 
