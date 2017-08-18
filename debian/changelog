@@ -1,3 +1,9 @@
+erlang-p1-sip (1.0.15-0.1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mathias Ertl <mati@jabber.at>  Fri, 18 Aug 2017 23:56:49 +0200
+
 erlang-p1-sip (1.0.13-0.1) unstable; urgency=medium
 
   * New upstream release.
