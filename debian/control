@@ -3,11 +3,11 @@ Section: libs
 Priority: optional
 Maintainer: Mathias Ertl <mati@jabber.at>
 X-Orig-Maintainer: Philipp Huebner <debalance@debian.org>
-Build-Depends: debhelper (>= 9), dh-rebar, erlang-eunit, erlang-syntax-tools,
- erlang-p1-stun (>= 1:1.0.12),
- erlang-p1-tls (>= 1.0.13),
- erlang-p1-utils (>= 1.0.9),
-Standards-Version: 4.0.0
+Build-Depends: debhelper (>= 9), dh-rebar, erlang-base, erlang-eunit, erlang-syntax-tools,
+ erlang-p1-stun (>= 1:1.0.15),
+ erlang-p1-tls (>= 1.0.16),
+ erlang-p1-utils (>= 1.0.10),
+Standards-Version: 4.1.1
 Homepage: https://github.com/processone/esip
 VCS-Browser: https://github.com/jabber-at/p1_sip
 VCS-Git: https://github.com/jabber-at/p1_sip.git
@@ -16,9 +16,9 @@ Package: erlang-p1-sip
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, erlang-base | ${erlang-abi:Depends},
  ${erlang:Depends},
- erlang-p1-stun (>= 1:1.0.12),
- erlang-p1-tls (>= 1.0.13),
- erlang-p1-utils (>= 1.0.9),
+ erlang-p1-stun (>= 1:1.0.15),
+ erlang-p1-tls (>= 1.0.16),
+ erlang-p1-utils (>= 1.0.10),
 Description: SIP library for Erlang
  This library was written for ejabberd which still uses it.
  It was split off into it's own project to follow

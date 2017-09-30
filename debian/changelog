@@ -4,6 +4,7 @@ erlang-p1-sip (1.0.16-0.1) unstable; urgency=medium
   * Update watch file.
   * Update copyright file.
   * Enable hardening.
+  * Update Standards-Version to 4.1.1 (no changes needed).
   * Rename remove_deps.diff to remove-deps.diff to match upstream name.
   * Rename fix_includes.diff to fix-includes.diff to match upstream name.
 
