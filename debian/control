@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Mathias Ertl <mati@jabber.at>
 X-Orig-Maintainer: Philipp Huebner <debalance@debian.org>
 Build-Depends: debhelper (>= 9), dh-rebar, erlang-base (>= 1:17.5), erlang-eunit, erlang-syntax-tools,
- erlang-p1-stun (<= 1.0.21),
+ erlang-p1-stun (>= 1.0.20),
  erlang-p1-tls (>= 1.0.20),
  erlang-p1-utils (>= 1.0.10),
 Standards-Version: 4.1.3
@@ -16,7 +16,7 @@ Package: erlang-p1-sip
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, erlang-base (>= 1:17.5) | ${erlang-abi:Depends},
  ${erlang:Depends},
- erlang-p1-stun (<= 1.0.21),
+ erlang-p1-stun (>= 1.0.20),
  erlang-p1-tls (>= 1.0.20),
  erlang-p1-utils (>= 1.0.10),
 Description: SIP library for Erlang
