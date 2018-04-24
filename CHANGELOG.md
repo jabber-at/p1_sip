@@ -1,3 +1,10 @@
+# Version 1.0.22
+
+* Updating stun to version 1.0.21.
+* Updating fast_tls to version 1.0.21.
+* Updating p1_utils to version 1.0.11.
+* Fix compilation with rebar3
+
 # Version 1.0.21
 
 * Updating fast_tls to version 1.0.20.
