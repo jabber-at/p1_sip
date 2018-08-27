@@ -5,6 +5,7 @@ erlang-p1-sip (1.0.24-0.1) unstable; urgency=medium
   * Add lintian override for Orig-Maintainer field
   * Name Ejabberd Packaging Team <ejabberd@packages.debian.org> as
     Orig-Maintainer
+  * Switched to debhelper 11
 
  -- Mathias Ertl <mati@jabber.at>  Mon, 27 Aug 2018 12:46:16 +0200
 
