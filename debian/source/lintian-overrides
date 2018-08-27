@@ -1,5 +1,6 @@
 erlang-p1-sip source: debian-watch-does-not-check-gpg-signature
+erlang-p1-sip source: maintainer-upload-has-incorrect-version-number
 erlang-p1-sip source: package-does-not-install-examples ebin/examples/
 erlang-p1-sip source: source-contains-empty-directory ebin/examples/
 erlang-p1-sip source: testsuite-autopkgtest-missing
-erlang-p1-sip source: maintainer-upload-has-incorrect-version-number
+erlang-p1-sip source: unknown-field-in-dsc orig-maintainer
